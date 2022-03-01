@@ -1,0 +1,593 @@
+#most common word
+"""
+#get the name of the file and open it
+name = input("Enter a file")
+handle = open(name, 'r')
+#count word frequency i.e. histogram
+counts = dict()
+
+for line in handle:
+    words = line.split()
+    for word in words:
+        counts[word] = counts.get(word, 0) + 1
+#find the most common word
+bigcount = None
+bigword = None
+for word, count in counts.items():
+    if bigcount is None or count > bigcount:
+        bigword = word
+        bigwordcount = count
+#all done
+print(bigword, bigcount)
+
+"""
+
+#x = 1 + 2 ** 3 / 4 *5
+#print(x)
+
+#a = "hello "+"world"
+#print(a)
+#type(1.0)
+#type("Hellw")
+#k = float(99) #typecasting
+#print(k)
+#i = int(42.0) #typecasting
+#print(i)
+#sval = "123"
+#type(sval)
+#ival = int(sval)
+#print(ival)
+#print(ival+7)
+
+#USER INPUT, Typecasting
+"""
+#name = input("Enter your name :")
+#print("Welcomne ",name)
+
+#inp = input("Europe floor? ")
+#usf = int(inp) + 1
+#print("US floor ",usf)
+"""
+#if conditional statement
+"""
+x = 5
+if x < 10:
+    print("smalller")
+if x > 20:
+    print("bigger")
+print("Finish")
+"""
+#if with indentation
+"""
+for i in range(5):
+    print(i)
+    if i>2:
+        print("Bigger than 2")
+    print("Done with i ",i)
+print("All done ")
+
+"""
+#nested if
+"""
+x = 42
+if x > 1:
+    print("more than 1")
+    if x < 100:
+        print("less then 100")
+print("All done ")
+
+"""
+#if-else
+"""
+x= 4
+if x>2:
+    print("bigger")
+else:
+    print("smaller")
+print("All done ")
+"""
+
+#if-elif-else
+"""
+x=4
+if x<2:
+    print("small")
+elif x<10:
+    print("medium")
+else:
+    print("LARGE")
+print("All done")
+"""
+#multi way puzzles
+#01
+"""
+x = int(input("Enter a number"))
+if x<2:
+    print("Below 2")
+elif x>=2:
+    print("Two or more")
+else:
+    print("something else")
+    
+"""
+#02
+"""
+x = int(input("Enter a number"))
+if x<2:
+    print("Below 2")
+elif x<20:
+    print("Below 20")
+#order not correct
+elif x<10: 
+    print("Below 10")
+else:
+    print("something else")
+"""
+#try anb except
+"""
+astr = "Hello World"
+try:
+    istr = int(astr) 
+    print(istr)
+except:
+    print("cannot be type casted to int")
+"""
+#try and except 2
+"""
+astr = "Hello World"
+try:
+    istr = int(astr)
+except:
+    istr = -1
+
+print("First", istr)
+
+astr = "123"
+try:
+    istr = int(astr)
+except:
+    istr = -1
+
+print("Second", istr)
+
+"""
+#try and except 3
+"""
+astr = "Hello World"
+try:
+    print("Hello")
+    istr = int(astr)
+    print("There")
+except:
+    istr = -1
+
+print("First", istr)
+"""
+#try and except 4
+"""
+rawstr = input("Enter a positive number: ")
+try:
+    ival = int(rawstr)
+except:
+    ival = -1
+
+if ival > 0:
+    print("input number is ", ival)
+else:
+    print("Not a positive number")
+"""
+#functions
+"""
+def thing():
+    print("Hello")
+    print("Have fun")
+thing()
+print("zip")
+thing()
+"""
+#built in function max(), min()
+"""
+big = max("Hello World wizard")
+print(big)
+list1 = [2,4,7,8,9,2,0]
+m = min(list1)
+print(m)
+"""
+#int(), float()
+"""
+f = 1+2*float(3)/4-5
+print(f)
+
+i = int(f)
+print(i)
+"""
+
+#function defining and callling(invoking)
+"""
+def display():
+    print("I am not okay!")
+
+display()
+"""
+#argument passing to functions
+"""
+def greet(lang):
+    if lang == 'es':
+        print("Hola")
+    elif lang == 'fr':
+        print("Bonjour")
+    else:
+        print("Hello")
+
+
+greet('es')
+greet('fr')
+greet('en')
+greet('bn')
+"""
+#Return value
+"""
+def add(x, y):
+    return x+y
+    
+result = add(6,7)
+print(result)
+"""
+#LOOP
+"""
+n=5
+while n>0:
+    print(n)
+    n=n-1
+print("Blastoff!")
+print(n)
+"""
+#break keyword
+"""
+while True:
+    line = input("> ")
+    if line == "Done":
+        break
+    print(line)
+print("Done!")
+"""
+#continue keyword
+"""
+while True:
+    line = input("> ")
+    if line[0] == "#":
+        continue
+    if line == "Done":
+        break
+    print(line)
+print("Done!")
+"""
+#definite loop, for loop
+"""
+for i in [5, 4, 3, 2, 1]:
+    print(i)
+print("Blastoff!")
+"""
+#iteration
+"""
+friends = ["Nazmul","Nissan","Piash"]
+for friend in friends:
+    print("Happy new yerar ",friend)
+print("Done")
+"""
+"""
+print("Before")
+for num in [9, 41, 12, 3, 74, 15]:
+    print(num)
+print("After")
+"""
+#maxima
+"""
+def maxima(list1):
+    is_largest = list1[0]
+    for num in list1:
+        if num > is_largest:
+            is_largest = num
+    return is_largest
+
+
+A = [9, 41, 1042, 12, 3, 74, 111, 711, 2, 98, 15]
+m = maxima(A)
+print("Maximum number:",m)
+
+"""
+
+
+#Counting element number i.e. list length
+"""
+def list_length(list1):
+    i = 0
+    for num in list1:
+        i = i+1
+    return i
+
+
+A = [9, 41, 1042, 12, 3, 74, 111, 711, 2, 98, 15]
+length = list_length(A)
+print("Number of elements in list:",length)
+"""
+
+
+#Sum of a list elements
+"""
+def Summation(list1):
+    sum = 0
+    for num in list1:
+        sum = sum+num
+    return sum
+
+
+A = [9, 41, 1042, 12, 3, 74, 111, 711, 2, 98, 15]
+sum = Summation(A)
+print("Summation of elements in list:",sum)
+"""
+
+#average of element of a list
+
+"""
+def average(list1):
+    i = 0
+    sum = 0
+    for num in list1:
+        i = i+1
+        sum = sum+num
+    avg = sum/i
+    return avg
+
+
+A = [9, 41, 1042, 12, 3, 74, 111, 711, 2, 98, 15]
+a = average(A)
+print("Average of elements in list:",a)
+"""
+
+#Filtering a loop e.g. value larger than 100
+"""
+def greater(list1):
+    for num in list1:
+        if num > 100:
+            print(num)
+
+A = [9, 41, 1042, 12, 3, 74, 111, 711, 2, 98, 15]
+greater(A)
+"""
+
+#searching a value in list using boolean variable
+"""
+def LinearSearch(list1, key):
+    found = False
+    for num in list1:
+        if num == key:
+            print("N:",num, " K:",key, " Matched")
+            found = True
+            break
+        print("N:",num, " K:",key, " Not Matched")
+    if found == True:
+        print("Found in list")
+    else:
+        print("Not in list")
+
+A = [9, 41, 1042, 12, 3, 74, 111, 711, 2, 98, 15]
+number = int(input("Enter a number to search for: "))
+LinearSearch(A, number)
+"""
+
+#minima
+"""
+def minima(list1):
+    is_smallest = list1[0]
+    for num in list1:
+        if num < is_smallest:
+            is_smallest = num
+    return is_smallest
+
+
+A = [9, 41, 1042, 12, 3, 74, 111, 711, 2, 98, 1, 15]
+m = minima(A)
+print("Minimum number:",m)
+"""
+#minima using None
+"""
+def minima(list1):
+    is_smallest = None
+    for num in list1:
+        if is_smallest is None:
+            is_smallest = num
+        elif num < is_smallest:
+            is_smallest = num
+    return is_smallest
+
+
+A = [9, 41, 1042, 12, 3, 74, 111, 711, 2, 98, 1, 15]
+m = minima(A)
+print("Minimum number:",m)
+"""
+#String
+"""
+str1 = "Hello"
+str2 = " There"
+str3 = str1+str2
+print(str3)
+
+name = input("Enter your name: ")
+print("Hello", name)
+fruit = "banana"
+print(fruit[2])
+print(len(fruit))
+"""
+#string index
+"""
+fruit = "banana"
+index = 0
+while index < len(fruit):
+    letter = fruit[index]
+    print(index, letter)
+    index = index + 1
+print(end="\n")
+for l in fruit:
+    print(l)
+"""
+
+#count no of a particular letter in a string
+"""
+word = input("Enter a word: ")
+l = input("Enter a letter: ")
+count = 0
+for letter in word:
+    if letter == l:
+        count = count + 1
+print(l,"is ",count,"times in ",word)
+"""
+#slicing string
+"""
+s="monty python"
+print(s[2:8])
+print(s[:8])
+print(s[4:])
+"""
+#string concatenation
+"""
+a= "Hello"
+b = a + " There"
+print(b)
+
+"""
+
+#string library i.e. methods of string object
+"""
+str = " hello World. what is going on! "
+lowercase = str.lower()
+print(lowercase)
+uppercase = str.upper()
+print(uppercase)
+print("Zahid".lower())
+print("Zahid".upper())
+length = len(str)
+print(length)
+list = str.strip()#strips off any whitespace from left or right
+print(list)
+print(len(list))
+s = str.split()#Returns a list of splitted words
+print(s)
+print(len(s))
+c = str.capitalize()
+print(c)
+f = str.find('t')
+print(f)
+f2 = str.find('o')
+print(f2)#not okay!
+f3 = str.find('z')
+print(f3)
+r = str.replace("ll", "kk")
+print(r)
+q = str.startswith('h')
+print(q)
+m = str.startswith(' ')
+print(m)
+
+"""
+
+#parsing and extracting
+"""
+data = "From stephen.marquard@uct.ac.za Sat Jan 5 09:14:16 2008"
+atpos = data.find('@')
+print(atpos)
+sppos = data.find(' ',atpos)
+print(sppos)
+host = data[atpos+1 : sppos]
+print(host)
+"""
+"""
+hw = "Hello\nWorld"
+print(hw)
+print(len(hw))
+"""
+#File Reading
+"""
+fhand = open("code3\mbox-short.txt")
+print(fhand)
+"""
+"""
+xfile = open("code3\mbox-short.txt") 
+for word in xfile:
+    print(word)
+"""
+#reading line by line
+"""
+x = open("gollum.txt") # x file handle, not data
+count = 0
+for line in x:
+    print(line )
+    count = count+1
+print("Line count: ",count)
+"""
+#reading word by word
+"""
+gollum = open("gollum.txt") # gollum file handle, not data
+character = gollum.read() #reading file,converted to strings
+print(character)
+print(len(character))
+print(character[:35])
+
+word = character.split()
+print(word)
+print(len(word))
+print(word[:5])
+"""
+"""
+#searching through a file
+fhand = open("code3\mbox-short.txt")
+for line in fhand:
+    if line.startswith("From:"):
+        print(line)
+"""
+
+#searching through a file(fixed)
+"""
+fhand = open("code3\mbox-short.txt")
+for line in fhand:
+    line = line.rstrip()#removes a newline
+    if line.startswith("From:"):
+        print(line)
+"""
+#skipping with continue,searching through a file
+"""
+fhand = open("code3\mbox-short.txt")
+for line in fhand:
+    line = line.rstrip()#removes a newline
+    if not line.startswith("From:"):
+        continue
+    print(line)
+"""
+#using 'in' operator to select line
+"""
+fhand = open("code3\mbox-short.txt")
+for line in fhand:
+    line = line.rstrip()#removes a newline
+    if not "@uct.ac.za" in line:
+        continue
+    print(line)
+"""
+fname = input("Enter the file name: ")
+fhand = open(fname) #line by line
+count = 0
+characters = fhand.read()#character by character
+print(len(characters))#prints total character number
+words = characters.split() #words by words, a list
+print(words)#prints a list
+print(len(words))#prints words number
+for ch in words:
+    if ch=="gollum":
+        print(ch)
+        count = count+1
+
+print("The are ",count,"gollum in",fname)
+
+
+
+
+

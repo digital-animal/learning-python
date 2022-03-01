@@ -1,0 +1,15 @@
+Pacific
+PacificAtlantic
+AtlanticIndian
+IndianSouthern
+SouthernArctic
+Arctic
+
+There are 7 continents.
+Asia
+Europe
+Africa
+North America
+South America
+Australia
+Antarctica

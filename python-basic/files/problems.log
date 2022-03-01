@@ -1,0 +1,4 @@
+ERROR:root:[Errno 2] No such file or directory: 'example.mp4'
+INFO:root:Time required for example.mp4 = 0.00010633468627929688
+ERROR:root:[Errno 2] No such file or directory: 'example.mp4'
+INFO:root:Time required for example.mp4 = 0.0001266002655029297

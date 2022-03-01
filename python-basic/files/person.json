@@ -1,0 +1,12 @@
+{
+    "name": "Zahid",
+    "age": 30,
+    "city": "Dhaka",
+    "isMarried": false,
+    "titles": [
+        "Student",
+        "Programmer",
+        "Hiker"
+    ],
+    "Salary": null
+}
